@@ -1,0 +1,65 @@
+<h2 class="contact__title"> Entre em contato</h2>
+<section class="contact__container">
+    <form class="contact-form" [formGroup]="formContato">
+        <input type="text" placeholder="Digite seu nome" formControlName="nome"
+            [class.valid]="formContato.controls['nome'].valid" [class.invalid]="formContato.controls['nome'].invalid &&
+            (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)" />
+        <div *ngIf="formContato.controls['nome'].invalid &&
+            (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)">
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('minlength')">
+                Este campo precisa de no mínimo 4 caracteres.
+            </small>
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('required')">
+                Este campo precisa ser preenchido.
+            </small>
+        </div>
+        <input type="assunto" placeholder="Digite o assunto" />
+        <div *ngIf="formContato.controls['assunto'].invalid &&
+        (formContato.controls['assunto'].touched || formContato.controls['assunto'].dirty)">
+            <small class="error-message" *ngIf="formContato.controls['assunto'].hasError('minlength')">
+                Este campo precisa de no mínimo 4 caracteres.
+            </small>
+            <small class="error-message" *ngIf="formContato.controls['assunto'].hasError('required')">
+                Este campo precisa ser preenchido.
+            </small>
+        </div>
+        <input type="tel" placeholder="(00) 0 0000-0000" />
+        <div *ngIf="formContato.controls['nome'].invalid &&
+        (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)">
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('minlength')">
+                Este campo precisa de no mínimo 4 caracteres.
+            </small>
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('required')">
+                Este campo precisa ser preenchido.
+            </small>
+        </div>
+        <input type="email" placeholder="Digite o seu e-mail" />
+        <div *ngIf="formContato.controls['nome'].invalid &&
+        (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)">
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('minlength')">
+                Este campo precisa de no mínimo 4 caracteres.
+            </small>
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('required')">
+                Este campo precisa ser preenchido.
+            </small>
+        </div>
+        <textarea maxlength="300" placeholder="Digite sua mensagem..."></textarea>
+        <div *ngIf="formContato.controls['nome'].invalid &&
+        (formContato.controls['nome'].touched || formContato.controls['nome'].dirty)">
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('minlength')">
+                Este campo precisa de no mínimo 4 caracteres.
+            </small>
+            <small class="error-message" *ngIf="formContato.controls['nome'].hasError('required')">
+                Este campo precisa ser preenchido.
+            </small>
+        </div>
+        <button>Enviar</button>
+    </form>
+</section>
+<address>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61501.78727164105!2d-47.317940899999954!3d-15.545542749999989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9350a2912067fad5%3A0x6a35994b2edf538b!2zRm9ybW9zYSwgR29pw6Fz!5e0!3m2!1ses-419!2sbr!4v1657129891126!5m2!1ses-419!2sbr"
+        width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Avenida Circular Quadra 70 número 19</p>
+</address>
