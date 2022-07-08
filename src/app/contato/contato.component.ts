@@ -11,6 +11,7 @@ export class ContatoComponent implements OnInit {
   formContato = this.fb.group({
     nome: ["", [
       Validators.minLength(4),
+      Validators.required
     ]],
     assunto:["", [
       Validators.minLength(10),
@@ -36,4 +37,8 @@ export class ContatoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enviarFormulario(){
+    alert("Mensagem enviada com sucesso!");
+    this.formContato.reset();
+  }
 }
